@@ -1,0 +1,40 @@
+<head>
+  <title>ivr_phone_numbers</title>
+</head>
+
+<body>
+  <h1> Patients subscribed to IVR </h1>
+  {{>patients}}
+</body>
+
+<template name="patients">
+  <table class="striped">
+    <thead>
+      <th>Phone</th> 
+      <th>Name</th> 
+      <th>Language</th> 
+      <th>Placed in System</th> 
+    </thead>
+    
+    <tbody>
+      {{#each patients}}
+      <tr>
+        <td> {{phone}} </td>
+        <td> {{name}} </td>
+        <td> {{language}} </td>
+        <td> <input type="checkbox" id="placedInSystem" name="placedInSystem"> </td>
+      </tr>
+      {{/each}}
+    </tbody>
+  </table>
+
+  <h2> Already placed in IVR system </h2>
+  {{#each inSystem}}
+    <p> {{phone}}, {{language}}, {{name}} </p>
+  {{/each}}
+  
+  <h3>Patients not subscribed to IVR</h3>
+  {{#each notSubscribed}}
+    <p> {{phone}}, {{language}}, {{name}} </p>
+  {{/each}}
+</template>
