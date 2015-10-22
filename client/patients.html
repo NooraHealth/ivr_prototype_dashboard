@@ -3,8 +3,10 @@
 </head>
 
 <body>
-  <h1> Patients subscribed to IVR </h1>
-  {{>patients}}
+  <div class="container">
+    <h3> Patients subscribed to IVR but not placed in System </h3>
+    {{>patients}}
+  </div>
 </body>
 
 <template name="patients">
@@ -28,13 +30,46 @@
     </tbody>
   </table>
 
-  <h2> Already placed in IVR system </h2>
-  {{#each inSystem}}
-    <p> {{phone}}, {{language}}, {{name}} </p>
-  {{/each}}
+  <h3> Already placed in IVR system </h3>
+  <table class="striped">
+    <thead>
+      <th>Phone</th> 
+      <th>Name</th> 
+      <th>Language</th> 
+      <th>Placed in System</th> 
+    </thead>
+    
+    <tbody>
+      {{#each inSystem}}
+      <tr>
+        <td> {{phone}} </td>
+        <td> {{name}} </td>
+        <td> {{language}} </td>
+        <td> <input type="checkbox" id="placedInSystem" name="placedInSystem"> </td>
+      </tr>
+      {{/each}}
+    </tbody>
+  </table>
   
   <h3>Patients not subscribed to IVR</h3>
-  {{#each notSubscribed}}
-    <p> {{phone}}, {{language}}, {{name}} </p>
-  {{/each}}
+
+  <table class="striped">
+    <thead>
+      <th>Phone</th> 
+      <th>Name</th> 
+      <th>Language</th> 
+      <th>Placed in System</th> 
+    </thead>
+    
+    <tbody>
+      {{#each notSubscribed}}
+      <tr>
+        <td> {{phone}} </td>
+        <td> {{name}} </td>
+        <td> {{language}} </td>
+        <td> <input type="checkbox" id="placedInSystem" name="placedInSystem"> </td>
+      </tr>
+      {{/each}}
+    </tbody>
+  </table>
 </template>
