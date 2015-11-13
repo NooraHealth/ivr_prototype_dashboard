@@ -1,5 +1,5 @@
 {
   "public": {
-
+    "patients_collection": "tracker_patients"
   }
 }

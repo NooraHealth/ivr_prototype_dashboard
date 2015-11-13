@@ -20,3 +20,5 @@ autopublish             # Publish all data to the clients (for prototyping)
 insecure                # Allow all DB writes from clients (for prototyping)
 coffeescript
 materialize:materialize@=0.97.0
+momentjs:moment
+dburles:collection-helpers
