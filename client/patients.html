@@ -18,6 +18,7 @@
       <th>Date Class</th> 
       <th>Date Practical</th> 
       <th>Date Discharged</th> 
+      <th>Subscribed to IVR</th> 
       <th>Placed in System</th> 
     </thead>
     
@@ -30,56 +31,57 @@
         <td> {{humanReadableDate date_first_class}} </td>
         <td> {{humanReadableDate date_practical}} </td>
         <td> {{humanReadableDate date_discharged}} </td>
+        <td> {{subscribes_to_ivr}} </td>
         <td> <input type="checkbox" id="placedInSystem" name="placedInSystem"><label for="placedInSystem"></label> </td>
       </tr>
       {{/each}}
     </tbody>
   </table>
 
-  <h3>Patients not subscribed to IVR</h3>
+  <!--<h3>Patients not subscribed to IVR</h3>-->
 
-  <table class="striped">
-    <thead>
-      <th>Phone</th> 
-      <th>Language</th> 
-      <th>Date Added</th> 
-      <th>Date Class</th> 
-      <th>Date Practical</th> 
-      <th>Date Discharged</th> 
-    </thead>
+  <!--<table class="striped">-->
+    <!--<thead>-->
+      <!--<th>Phone</th> -->
+      <!--<th>Language</th> -->
+      <!--<th>Date Added</th> -->
+      <!--<th>Date Class</th> -->
+      <!--<th>Date Practical</th> -->
+      <!--<th>Date Discharged</th> -->
+    <!--</thead>-->
     
-    <tbody>
-      {{#each notSubscribed}}
-      <tr>
-        <td> {{phone}} </td>
-        <td> {{language}} </td>
-        <td> {{humanReadableDate date_added}} </td>
-        <td> {{humanReadableDate date_first_class}} </td>
-        <td> {{humanReadableDate date_practical}} </td>
-        <td> {{humanReadableDate date_discharged}} </td>
-      </tr>
-      {{/each}}
-    </tbody>
-  </table>
+    <!--<tbody>-->
+      <!--{{#each notSubscribed}}-->
+      <!--<tr>-->
+        <!--<td> {{phone}} </td>-->
+        <!--<td> {{language}} </td>-->
+        <!--<td> {{humanReadableDate date_added}} </td>-->
+        <!--<td> {{humanReadableDate date_first_class}} </td>-->
+        <!--<td> {{humanReadableDate date_practical}} </td>-->
+        <!--<td> {{humanReadableDate date_discharged}} </td>-->
+      <!--</tr>-->
+      <!--{{/each}}-->
+    <!--</tbody>-->
+  <!--</table>-->
 
-  <h3> Already placed in IVR system </h3>
-  <table class="striped">
-    <thead>
-      <th>Phone</th> 
-      <th>Language</th> 
-      <th>Date Added</th> 
-    </thead>
+  <!--<h3> Already placed in IVR system </h3>-->
+  <!--<table class="striped">-->
+    <!--<thead>-->
+      <!--<th>Phone</th> -->
+      <!--<th>Language</th> -->
+      <!--<th>Date Added</th> -->
+    <!--</thead>-->
     
-    <tbody>
-      {{#each inSystem}}
-      <tr>
-        <td> {{phone}} </td>
-        <td> {{language}} </td>
-        <td> {{dateAdded}} </td>
-      </tr>
-      {{/each}}
-    </tbody>
-  </table>
+    <!--<tbody>-->
+      <!--{{#each inSystem}}-->
+      <!--<tr>-->
+        <!--<td> {{phone}} </td>-->
+        <!--<td> {{language}} </td>-->
+        <!--<td> {{dateAdded}} </td>-->
+      <!--</tr>-->
+      <!--{{/each}}-->
+    <!--</tbody>-->
+  <!--</table>-->
   
 </template>
 <template name="placedCheckbox">
