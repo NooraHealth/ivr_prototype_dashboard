@@ -8,7 +8,7 @@ Template.patients.helpers
     console.log "Patients"
     console.log Patients
     #return Patients.find { $and: [ {subscribes_to_ivr: true} , { has_been_input_to_ivr_system: false}] } , { sort: { date_added: -1 }}
-    return Patients.find {}
+    return Patients.find {}, { sort: { date_added: -1 }}
 
   #inSystem: ()->
     #return Patients.find { $and: [ { subscribes_to_ivr: true } , { has_been_input_to_ivr_system: true }]}, {sort: { date_added: -1 }}
