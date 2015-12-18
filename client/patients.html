@@ -32,7 +32,11 @@
         <td> {{humanReadableDate date_practical}} </td>
         <td> {{humanReadableDate date_discharged}} </td>
         <td> {{subscribes_to_ivr}} </td>
-        <td> <input type="checkbox" id="placedInSystem" name="placedInSystem"><label for="placedInSystem"></label> </td>
+        {{#if has_been_input_to_ivr_system}} 
+        <td> <input type="checkbox" id="placedInSystem{{_id}}" name="placedInSystem" checked><label for="placedInSystem{{_id}}"></label> </td>
+        {{else}}
+        <td> <input type="checkbox" id="placedInSystem{{_id}}" name="placedInSystem" ><label for="placedInSystem{{_id}}"></label> </td>
+        {{/if}}
       </tr>
       {{/each}}
     </tbody>
