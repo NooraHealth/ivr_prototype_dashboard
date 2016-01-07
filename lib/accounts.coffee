@@ -32,7 +32,7 @@ AccountsTemplates.configure {
   termsUrl: 'terms-of-use',
 
   ## Redirects
-  defaultLayout: 'entry',
+  defaultLayout: 'layout',
   defaultLayoutRegions: {},
   defaultContentRegion: 'main'
   #redirectTimeout: 4000,
