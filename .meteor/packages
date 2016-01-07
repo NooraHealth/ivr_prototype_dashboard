@@ -22,3 +22,9 @@ coffeescript
 materialize:materialize@=0.97.0
 momentjs:moment
 dburles:collection-helpers
+accounts-google
+kadira:flow-router
+kadira:blaze-layout
+useraccounts:flow-routing
+accounts-password
+useraccounts:materialize
