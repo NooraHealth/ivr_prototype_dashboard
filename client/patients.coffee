@@ -14,3 +14,9 @@ Template.patients.events
     console.log placed
     Patients.update { _id: @._id }, { $set: { has_been_input_to_ivr_system: placed }}
 
+  "click #logout": ()->
+    console.log "logging out"
+    Meteor.logout( ()->
+      FlowRouter.go '/sign-in'
+    )
+
