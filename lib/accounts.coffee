@@ -61,8 +61,13 @@ AccountsTemplates.addField {
     signUp: "Only users with noorahealth.org email addresses can access"
   }
   required: true
-  re: /.+@noorahealth.org\b/
-}
+  func: ( email )->
+    re = /.+@noorahealth.org\b/
+    match = email.match re
+    return !match
+
+  errStr: "Invalid email"
+  }
 
 AccountsTemplates.addField(pwd)
 
